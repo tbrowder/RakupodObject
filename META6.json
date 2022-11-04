@@ -1,0 +1,25 @@
+{
+  "auth": "zef:tbrowder",
+  "authors": [
+    "Tom Browder"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Provides a routine to extract the '$=pod' object from an external Rakupod source",
+  "license": "Artistic-2.0",
+  "name": "RakupodObject",
+  "perl": "6.d",
+  "provides": {
+    "RakupodObject": "lib/RakupodObject.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "",
+  "tags": [
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

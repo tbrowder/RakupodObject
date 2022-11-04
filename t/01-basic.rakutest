@@ -1,0 +1,6 @@
+use Test;
+use RakupodObject;
+
+pass "replace me";
+
+done-testing;
