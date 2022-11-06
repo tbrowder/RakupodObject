@@ -1,7 +1,7 @@
 unit module RakupodObject;
 
-multi sub extract-rakupod-object($pod-file) is export {
-    my $pod-string = slurp $pod-file;
+multi sub extract-rakupod-object(IO::Path:D $pod-file) is export { 
+    my Str $pod-string = slurp $pod-file;
     extract-rakupod-object $pod-string
 }
 
