@@ -34,7 +34,6 @@ cmp-ok $good, '~~', Pod::Block, "is a Pod::Block";
 lives-ok {
     $good = extract-rakupod-object $raku-pod;
 }, "good raku file with pod";
-isa-ok $good, Pod::Block::Comment;
 cmp-ok $good, '~~', Pod::Block, "is a Pod::Block";
 
 done-testing;

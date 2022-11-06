@@ -4,6 +4,8 @@ for @*ARGS {
     say "arg $_";
 }
 
+=item comment
+
 =comment
 A comment
 
