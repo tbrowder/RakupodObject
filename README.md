@@ -15,13 +15,13 @@ use RakupodObject;
 DESCRIPTION
 ===========
 
-**RakupodObject** is a module that enables easy access to the Rakupod object represented by the Raku variable `$=pod`. That variable holds the compiled Rakupod tree in a Raku source file. It is used by external programs whose purpose is to process the Rakupod into other objects, primarily other forms of documentation.
+**RakupodObject** is a module that enables easy access to the Rakupod object represented by the Raku variable `$=pod`. That variable (a `Pod::Block`) holds the compiled Rakupod tree in a Raku source file. It is used by external programs whose purpose is to process the Rakupod into other objects, primarily other forms of documentation. See the Raku docs for a complete description of the various `Pod::Block` subtypes and their attributes.
 
 The module exports two multi subroutines.
 
-  * multi sub extract-rakupod-object(IO::Path:D $pod-file) is export {...}
+  * multi sub extract-rakupod-object(IO::Path:D $pod-file --> Pod::Block) is export {...}
 
-  * multi sub extract-rakupod-object(Str:D $pod-string) is export {...}
+  * multi sub extract-rakupod-object(Str:D $pod-string --> Pod::Block) is export {...}
 
 Credits
 =======

@@ -15,16 +15,17 @@ use RakupodObject;
 =head1 DESCRIPTION
 
 B<RakupodObject> is a module that enables easy access to the Rakupod
-object represented by the Raku variable C<$=pod>. That variable holds
+object represented by the Raku variable C<$=pod>. That variable (a C<Pod::Block>) holds
 the compiled Rakupod tree in a Raku source file. It is used by external
 programs whose purpose is to process the Rakupod into other objects,
-primarily other forms of documentation.
+primarily other forms of documentation. See the Raku docs for a complete
+description of the various C<Pod::Block> subtypes and their attributes.
 
 The module exports two multi subroutines.
 
-=item multi sub extract-rakupod-object(IO::Path:D $pod-file) is export  {...}
+=item multi sub extract-rakupod-object(IO::Path:D $pod-file --> Pod::Block) is export  {...}
 
-=item multi sub extract-rakupod-object(Str:D $pod-string) is export  {...}
+=item multi sub extract-rakupod-object(Str:D $pod-string --> Pod::Block) is export  {...}
 
 =Credits
 
