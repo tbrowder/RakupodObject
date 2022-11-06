@@ -1,0 +1,47 @@
+=begin pod
+
+=head1 NAME
+
+B<RakupodObject> - Provides a routine to extract the '$=pod' object from an external Rakupod source
+
+=head1 SYNOPSIS
+
+=begin code :lang<raku>
+
+use RakupodObject;
+
+=end code
+
+=head1 DESCRIPTION
+
+B<RakupodObject> is a module that enables easy access to the Rakupod
+object represented by the Raku variable C<$=pod>. That variable holds
+the compiled Rakupod tree in a Raku source file. It is used by external
+programs whose purpose is to process the Rakupod into other objects,
+primarily other forms of documentation.
+
+The module exports two multi subroutines.
+
+=item multi sub extract-rakupod-object(IO::Path:D $pod-file) is export  {...}
+
+=item multi sub extract-rakupod-object(Str:D $pod-string) is export  {...}
+
+=Credits
+
+The author is indebted to the Raku expert B<Vadim Belman> (AKA
+C<@vrurg>) who provided the routine during the construction of some Rakupod
+tests several years ago. The routine, in its original form, can be
+seen in file
+L<https://github.com/raku/roast/blob/master/S26-documentation/12-non-breaking-space.t>.
+
+=head1 AUTHOR
+
+Tom Browder <tbrowder@acm.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+© 2022 Tom Browder
+
+This library is free software; you may redistribute it or modify it under the Artistic License 2.0.
+
+=end pod
