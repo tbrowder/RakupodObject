@@ -27,6 +27,12 @@ The module exports two multi subroutines.
 
 =item multi sub extract-rakupod-object(Str:D $pod-string --> Pod::Block) is export  {...}
 
+=head Warning
+
+The exported routines use pragma C<MONKEY-SEE-NO-EVAL> so, as is mentioned in the Raku docs,
+the user is warned of the possibility of system compromise with malicious code in
+the C<EVAL>ed string.
+
 =Credits
 
 The author is indebted to the Raku expert B<Vadim Belman> (AKA
