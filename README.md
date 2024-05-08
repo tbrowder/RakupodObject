@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/tbrowder/RakupodObject/actions/workflows/test.yml/badge.svg)](https://github.com/tbrowder/RakupodObject/actions)
+[![Actions Status](https://github.com/tbrowder/RakupodObject/actions/workflows/linux.yml/badge.svg)](https://github.com/tbrowder/RakupodObject/actions) [![Actions Status](https://github.com/tbrowder/RakupodObject/actions/workflows/macos.yml/badge.svg)](https://github.com/tbrowder/RakupodObject/actions) [![Actions Status](https://github.com/tbrowder/RakupodObject/actions/workflows/windows.yml/badge.svg)](https://github.com/tbrowder/RakupodObject/actions)
 
 NAME
 ====

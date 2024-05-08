@@ -18,6 +18,7 @@
   ],
   "source-url": "https://github.com/tbrowder/RakupodObject.git",
   "tags": [
+    "pod pod6 rakupod $=pod pod-object"
   ],
   "test-depends": [
   ],

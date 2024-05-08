@@ -1,6 +1,8 @@
 Revision history for RakupodObject
 
 {{$NEXT}}
+    - Add 3OS tests
+    - Add tags
 
 0.0.3  2022-11-08T07:43:38-06:00
     - Add warning for use of pragma MONKEY-SEE-NO-EVAL
