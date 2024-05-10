@@ -1,6 +1,8 @@
 Revision history for RakupodObject
 
 {{$NEXT}}
+
+0.0.6  2024-05-10T14:02:20-05:00
     - Convert to one sub to handle pod source from either
         a string or a file
     - Improve README with better examples
