@@ -1,17 +1,19 @@
 unit module RakupodObject;
 
-multi sub extract-rakupod-object(IO::Path:D $pod-file --> Pod::Block) is export { 
-    my Str $pod-string = slurp $pod-file;
-    extract-rakupod-object $pod-string
-}
+sub extract-rakupod-object(
+    $pod-src is copy
+    --> Pod::Block
+) is export {
+    if $pod-src.IO.r {
+        $pod-src = slurp $pod-src.IO;
+    }
 
-multi sub extract-rakupod-object(Str:D $pod-string --> Pod::Block) is export {
     use MONKEY-SEE-NO-EVAL;
-    # from https://github.com/Raku/roast/blob/master/S26-documentation/12-non-breaking-space.t
+    # from https://github.com/Raku/roast/blob/master/
+    #              S26-documentation/12-non-breaking-space.t
     my $pod;
-    my $code = $pod-string ~ "\n";
+    my $code = $pod-src ~ "\n";
     $code ~= "\$pod = \$=pod[0]";
     EVAL $code;
     $pod
 }
-
