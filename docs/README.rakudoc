@@ -2,50 +2,10 @@
 
 =head1 NAME
 
-B<RakupodObject> - Provides a routine to extract the '$=pod' object
+B<RakupodObject> - An obsolete attempt to provide a routine to extract the '$=pod' object
 from an external Rakupod source (a file or a string)
 
-=head1 SYNOPSIS
-=begin code :lang<raku>
-use RakupodObject;
-my $pod-object = extract-rakupod-object $file;
-=end code
-
-=head1 DESCRIPTION
-
-B<RakupodObject> is a module that enables easy access to the Rakupod
-object represented by the Raku variable C<$=pod>. That variable, which
-is a C<Pod::Block> object, holds the complete, compiled Rakupod tree
-extracted from a Raku source file (or string). (It is the same as the
-C<$=pod> object used by code inside that source file.)
-
-It is used by external programs whose purpose is to process the
-Rakupod into other objects, primarily other forms of
-documentation. See the Raku docs for a complete description of the
-various C<Pod::Block> subtypes and their attributes.
-
-The module exports one subroutine:.
-
-=begin code
-sub extract-rakupod-object(
-    $pod-source # file or string
-    --> Pod::Block
-) is export  {...}
-=end code
-
-=head1 Warning
-
-The exported routine uses pragma C<MONKEY-SEE-NO-EVAL> so, as is
-mentioned in the Raku docs, the user is warned of the possibility of
-system compromise with malicious code in the C<EVAL>ed string.
-
-=head1 Credits
-
-The author is indebted to the Raku expert B<Vadim Belman> (AKA
-C<@vrurg>) who provided the routine during the construction of some
-Rakupod tests several years ago. The routine, in its original form,
-can be seen in file
-L<https://github.com/raku/roast/blob/master/S26-documentation/12-non-breaking-space.t>.
+B<Please use Pod::Loader instead.>
 
 =head1 AUTHOR
 
